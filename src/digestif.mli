@@ -167,6 +167,11 @@ module type S = sig
   (** [to_raw_string s] is [(s :> string)]. *)
 end
 
+module type SHA256_intf = sig
+  include S
+  val get_h : ctx -> int32 array
+end
+
 (** Some hash algorithms expose extra MAC constructs. The interface is similar
     to the [hmac_*] functions in [S]. *)
 module type MAC = sig
@@ -210,7 +215,7 @@ type 'k hash =
 module MD5 : S with type kind = [`MD5]
 module SHA1 : S with type kind = [`SHA1]
 module SHA224 : S with type kind = [`SHA224]
-module SHA256 : S with type kind = [`SHA256]
+module SHA256 : SHA256_intf with type kind = [`SHA256]
 module SHA384 : S with type kind = [`SHA384]
 module SHA512 : S with type kind = [`SHA512]
 module WHIRLPOOL : S with type kind = [`WHIRLPOOL]

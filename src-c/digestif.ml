@@ -61,6 +61,11 @@ module type S = sig
   val to_raw_string : t -> string
 end
 
+module type SHA256_intf = sig
+  include S
+  val get_h : ctx -> int32 array
+end
+
 module type MAC = sig
   type t
 
@@ -420,16 +425,23 @@ module SHA224 : S with type kind = [`SHA224] =
       let kind = `SHA224
     end)
 
-module SHA256 : S with type kind = [`SHA256] =
-  Make
-    (Native.SHA256)
-    (struct
-      let digest_size, block_size = 32, 64
+module SHA256 : SHA256_intf with type kind = [`SHA256] =
+  struct
+    include Make
+      (Native.SHA256)
+      (struct
+        let digest_size, block_size = 32, 64
 
-      type kind = [`SHA256]
+        type kind = [`SHA256]
 
-      let kind = `SHA256
-    end)
+        let kind = `SHA256
+      end)
+    let get_h ctx = 
+      let bst = Bi.create 32 in 
+      Native.SHA256.Bigstring.get_h ctx bst 0 ;
+      Array.init 8 (fun i -> Bi.unsafe_get_32 bst i)
+  end
+        
 
 module SHA384 : S with type kind = [`SHA384] =
   Make

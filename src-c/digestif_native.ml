@@ -136,6 +136,11 @@ module SHA256 = struct
       ctx -> ba -> off -> unit
       = "caml_digestif_sha256_ba_finalize"
       [@@noalloc]
+
+    external get_h : 
+      ctx -> ba -> off -> unit
+      = "caml_digestif_sha256_ba_get_h"
+      [@@noalloc]
   end
 
   module Bytes = struct
@@ -149,6 +154,11 @@ module SHA256 = struct
     external finalize :
       ctx -> st -> off -> unit
       = "caml_digestif_sha256_st_finalize"
+      [@@noalloc]
+
+    external get_h : 
+      ctx -> st -> off -> unit
+      = "caml_digestif_sha256_st_get_h"
       [@@noalloc]
   end
 
