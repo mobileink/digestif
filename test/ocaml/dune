@@ -1,6 +1,8 @@
 (test
   (name      test)
-  (deps      ../blake2b.test ../blake2s.test)
+  (deps      blake2b.test blake2s.test)
   (libraries fmt alcotest digestif.ocaml))
 
 (rule (copy# ../test.ml test.ml))
+(rule (copy ../blake2b.test blake2b.test))
+(rule (copy ../blake2s.test blake2s.test))

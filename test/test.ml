@@ -225,8 +225,8 @@ let results_blake2s =
   |> List.map (Digestif.of_hex (Digestif.blake2s Digestif.BLAKE2S.digest_size))
 
 module BLAKE2 = struct
-  let input_blake2b_file = "../blake2b.test"
-  let input_blake2s_file = "../blake2s.test"
+  let input_blake2b_file = "blake2b.test"
+  let input_blake2s_file = "blake2s.test"
 
   let fold_s f a s =
     let r = ref a in
