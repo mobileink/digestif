@@ -366,7 +366,7 @@ ocaml_binary(
         "@opam//pkg:fmt",
         "@opam//pkg:alcotest",
         "//:ocaml_composite"
-        # "//:ocaml_batch"
+        # "//:ocaml_batch"   ## not working atm, sorry
     ]
 )
 
@@ -384,7 +384,7 @@ ocaml_binary(
         "@opam//pkg:fmt",
         "@opam//pkg:alcotest",
         "//:c_composite",
-        # "//:c_batch",
+        # "//:c_batch",  # not working atm, sorry
     ]
 )
 
