@@ -1,5 +1,39 @@
+## WARNING:  Bazel branch.
+
+Uses [OBazl](https://github.com/mobileink/obazl).
+
+Caveat: currently only native builds are supported. Support for bytecode is in the works.
+
+Caveat 2:  Only tested on Mac OS Catalina.  Linux support on the way.  Windows, don't hold your breath.
+
+Targets:
+
+* `bazel run :ocaml_test`
+* `bazel run :c_test`
+
+Libs. Two build strategies: batch passes all source files to one Bazel
+target, composite builds each source file as a separate Bazel
+target. See comments in BUILD.bazel for details.
+
+* `bazel build :ocaml_batch`
+* `bazel build :ocaml_composite`
+* `bazel build :c_batch`
+* `bazel build :c_composite`
+
+You can build the parts.  Again, two build strategies.  A library is a
+collection of modules without an archive file (.cmxa, .a)
+
+* `bazel build :common_archive`
+* `bazel build :common_lib`
+* `bazel build :baijiu` - ocaml implementation lib
+* `bazel build :rakia` - the c implementation lib; produces librakia.a
+* `bazel build :rakia_archive` - produces librakia.cmxa
+* `bazel build :rakia_so` - produces librakia.cmxs
+
+
 Digestif - Hash algorithms in C and OCaml
 =========================================
+
 
 [![Build Status](https://travis-ci.org/mirage/digestif.svg?branch=master)](https://travis-ci.org/mirage/digestif)
 
