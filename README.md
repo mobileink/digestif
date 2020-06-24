@@ -13,7 +13,9 @@ Targets:
 
 Libs. Two build strategies: batch passes all source files to one Bazel
 target, composite builds each source file as a separate Bazel
-target. See comments in BUILD.bazel for details.
+target. See comments in BUILD.bazel for details, and the
+[libraries](https://github.com/mobileink/obazl/blob/master/docs/libraries.md)
+doc for OBazl.
 
 * `bazel build :ocaml_batch`
 * `bazel build :ocaml_composite`
