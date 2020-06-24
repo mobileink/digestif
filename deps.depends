@@ -1,0 +1,18 @@
+src/digestif_bi.ml: Array1 Bigarray Bytes Int64 Nativeint String Sys
+src/digestif_conv.ml: Bytes Char Format String
+src/digestif_eq.ml: Eqaf String
+src/digestif_hash.ml:
+src-ocaml/baijiu_blake2b.ml: Array Bytes Char Digestif_bi Digestif_by Int32 Int64
+src-ocaml/baijiu_blake2s.ml: Array Bytes Char Digestif_bi Digestif_by Int32 Int64
+src/digestif_by.ml: Bigarray Bytes Int64 Nativeint Sys
+src-ocaml/baijiu_md5.ml: Array Bytes Digestif_bi Digestif_by Int32 Int64
+src-ocaml/baijiu_rmd160.ml: Array Bytes Digestif_bi Digestif_by Int32 Int64
+src-ocaml/baijiu_sha1.ml: Array Bytes Digestif_bi Digestif_by Int32 Int64
+src-ocaml/baijiu_sha224.ml: Baijiu_sha256 Digestif_bi Digestif_by
+src-ocaml/baijiu_sha384.ml: Baijiu_sha512 Digestif_bi Digestif_by
+src-ocaml/baijiu_sha512.ml: Array Bytes Digestif_bi Digestif_by Int64
+src-ocaml/baijiu_whirlpool.ml: Array Bytes Digestif_bi Digestif_by Int64
+src-ocaml/xor.ml: Digestif_bi Digestif_by Nativeint Sys
+src-ocaml/digestif.ml: Baijiu_blake2b Baijiu_blake2s Baijiu_md5 Baijiu_rmd160 Baijiu_sha1 Baijiu_sha224 Baijiu_sha256 Baijiu_sha384 Baijiu_sha512 Baijiu_whirlpool Bigarray Bytes Digestif_bi Digestif_by Digestif_conv Digestif_eq Digestif_hash Format Hashtbl List Pervasives String Xor
+src-c/digestif_native.ml: Digestif_bi Digestif_by
+src-ocaml/baijiu_sha256.ml: Array Bytes Digestif_bi Digestif_by Int32 Int64

@@ -1,0 +1,16 @@
+src/digestif_bi.ml
+src/digestif_by.ml
+src/digestif_conv.ml
+src/digestif_eq.ml
+src/digestif_hash.ml
+src-ocaml/baijiu_blake2b.ml
+src-ocaml/baijiu_blake2s.ml
+src-ocaml/baijiu_md5.ml
+src-ocaml/baijiu_rmd160.ml
+src-ocaml/baijiu_sha1.ml
+src-ocaml/baijiu_sha224.ml
+src-ocaml/baijiu_sha384.ml
+src-ocaml/baijiu_sha512.ml
+src-ocaml/baijiu_whirlpool.ml
+src-ocaml/xor.ml
+src-ocaml/digestif.ml

@@ -1,0 +1,7 @@
+bazel-out/darwin-fastbuild/bin/tmp/src/digestif_by.ml
+bazel-out/darwin-fastbuild/bin/tmp/src/digestif_bi.ml
+bazel-out/darwin-fastbuild/bin/tmp/src/digestif_conv.ml
+bazel-out/darwin-fastbuild/bin/tmp/src/digestif_eq.ml
+bazel-out/darwin-fastbuild/bin/tmp/src/digestif_hash.ml
+bazel-out/darwin-fastbuild/bin/tmp/src-c/digestif_native.ml
+bazel-out/darwin-fastbuild/bin/tmp/src-c/digestif.ml
