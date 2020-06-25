@@ -23,3 +23,6 @@ try-import user.bazelrc
 # build --jobs 600
 # build --toolchain_resolution_debug
 # query --keep_going
+
+## for development/debugging: use local obazl repo
+# build --override_repository=obazl=/path/to/obazl
