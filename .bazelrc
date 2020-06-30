@@ -13,6 +13,7 @@ try-import user.bazelrc
 ## copy the following to user.bazelrc to get started:
 
 # build --color=yes
+# build --symlink_prefix=.bazel/   # use hidden dir instead of top-level symlinks
 # build --subcommands    # prints build cmd with space-separate args
 # build --subcommands=pretty_print  # same, but args are newline-separated
 # build --verbose_failures
