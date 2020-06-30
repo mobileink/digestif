@@ -2,10 +2,10 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository") # , "new_g
 
 git_repository(
     name = "obazl",
-    branch = "master",
-    # commit = "214d4bb0e4b88f2949bf590070c0faccb097fc79",
     remote = "https://github.com/mobileink/obazl",
-    # shallow_since = "1592257503 -0500"
+    # branch = "master",
+    commit = "e848f42ed169f69fd12d1dbacf49d5d6e38dbe15",
+    shallow_since = "1593486114 -0500"
 )
 
 load("@obazl//ocaml:deps.bzl",
