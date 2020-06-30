@@ -48,8 +48,8 @@ BAIJIU_SRCS = [
 OCAML_SRCS = BAIJIU_SRCS + ["src-ocaml/digestif.ml"]
 
 C_SRCS = [
-    "src-c/digestif.ml",
-    "src-c/digestif_native.ml"
+    "src-c/digestif_native.ml",
+    "src-c/digestif.ml"
 ]
 
 SUBMODULE_COPTS = [
