@@ -1,4 +1,5 @@
-user.bazel
+.bazel
+user.bazelrc
 _build
 setup.data
 setup.log
