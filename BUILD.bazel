@@ -86,7 +86,7 @@ ocaml_module(name="baijiu_sha384", impl="src-ocaml/baijiu_sha384.ml", deps=[":di
 ocaml_module(name="baijiu_whirlpool", impl="src-ocaml/baijiu_whirlpool.ml", deps=[":digestif_bi", ":digestif_by"])
 ocaml_module(name="xor", impl="src-ocaml/xor.ml", deps=[":digestif_bi", ":digestif_by"])
 
-ocaml_module(name="digestif_ocaml", impl="src-ocaml/digestif.ml", deps=[":baijiu", ":xor"])
+ocaml_module(name="digestif_ocaml_cm", impl="src-ocaml/digestif.ml", deps=[":baijiu", ":xor"])
 
 ocaml_archive(
     name = "common_archive",
