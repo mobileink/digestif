@@ -1,4 +1,5 @@
 .bazel
+bazel-out
 user.bazelrc
 _build
 setup.data
