@@ -150,7 +150,7 @@ ocaml_library(
     ## Note that the dependencies are build targets, not files - this forces them to build.
     deps = [
         ":common_archive", ## this could also be ":common_lib"
-        ":digestif_ocaml",
+        ":digestif_ocaml_cm",
     ]
 )
 
