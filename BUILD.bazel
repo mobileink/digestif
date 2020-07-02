@@ -7,9 +7,9 @@ load("@obazl//ocaml:build.bzl",
      "ocaml_interface",
      "ocaml_library",
      "ocaml_module",
-     "ocaml_ppx_binary",
-     "ocaml_ppx_module",
-     "ocaml_ppx_archive")
+     "ppx_binary",
+     "ppx_module",
+     "ppx_archive")
 
 ################################################################
 COMMON_SRCS = [
