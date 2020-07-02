@@ -105,7 +105,7 @@ ocaml_archive(
 
 ocaml_library(
     name = "common_lib",
-    message = "digestif, common",
+    msg = "digestif, common",
     visibility = ["//visibility:public"],
     opts = ["-I", "src", "-open", "Digestif_by"],
     deps = [
@@ -120,7 +120,7 @@ ocaml_library(
 
 ocaml_library(
     name = "baijiu",
-    message = "digestif baijiu, composite",
+    msg = "digestif baijiu, composite",
     visibility = ["//visibility:public"],
     opts = ["-I", "src", "-open", "Digestif_by"],
     deps = [
@@ -144,7 +144,7 @@ ocaml_library(
 ## (source file).
 ocaml_library(
     name = "ocaml_composite",
-    message = "digestif, composite",
+    msg = "digestif, composite",
     visibility = ["//visibility:public"],
     opts = ["-I", "src", "-open", "Digestif_by"],
     ## Note that the dependencies are build targets, not files - this forces them to build.
@@ -158,7 +158,7 @@ ocaml_library(
 ## compile job; the compiler runs jobs for each file.
 ocaml_library(
     name = "ocaml_batch",
-    message = "",
+    msg = "",
     visibility = ["//visibility:public"],
     opts = ["-verbose",
              "-ccopt", "-v",
@@ -264,7 +264,7 @@ ocaml_archive(
 ## Now integrate librakia and ocaml. Two methods, batched and composite.
 ocaml_library(
     name = "c_batch",
-    message = "digestif, c batch",
+    msg = "digestif, c batch",
     visibility = ["//visibility:public"],
     srcs = COMMON_SRCS + C_SRCS,
     # WARNING: depgraph is broken atm. You must list the srcs in dependency order.
@@ -287,7 +287,7 @@ ocaml_library(
 
 ocaml_library(
     name = "c_composite",
-    message = "digestif, c composite",
+    msg = "digestif, c composite",
     visibility = ["//visibility:public"],
     opts = ["-I", "src", "-open", "Digestif_by"],
     deps = [
