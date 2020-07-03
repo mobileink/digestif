@@ -1,4 +1,4 @@
-load("@obazl//ocaml:build.bzl",
+load("@obazl_rules_ocaml//ocaml:build.bzl",
      "ocaml_submodule_rename",  # macro
      "ocaml_redirector_gen",  # macro
      "ocaml_archive",
@@ -91,7 +91,7 @@ ocaml_module(name="digestif_ocaml_cm", impl="src-ocaml/digestif.ml", deps=[":bai
 ocaml_archive(
     name = "common_archive",
     message = "digestif, common",
-    visibility = ["//visibility:public"],
+    # visibility = ["//visibility:private"],
     opts = ["-I", "src", "-open", "Digestif_by"],
     deps = [
         ":digestif_by",
@@ -106,7 +106,7 @@ ocaml_archive(
 ocaml_library(
     name = "common_lib",
     msg = "digestif, common",
-    visibility = ["//visibility:public"],
+    # visibility = ["//visibility:public"],
     opts = ["-I", "src", "-open", "Digestif_by"],
     deps = [
         ":digestif_by",
@@ -121,7 +121,7 @@ ocaml_library(
 ocaml_library(
     name = "baijiu",
     msg = "digestif baijiu, composite",
-    visibility = ["//visibility:public"],
+    # visibility = ["//visibility:private"],
     opts = ["-I", "src", "-open", "Digestif_by"],
     deps = [
         ":common_lib",
@@ -236,7 +236,7 @@ ocaml_archive(
     name = "rakia_archive",
     archive_name = "librakia",
     message = "digestif, rakia_lib",
-    visibility = ["//visibility:public"],
+    # visibility = ["//visibility:private"],
     opts = [# "-linkall",
             "-verbose"
     ],
@@ -251,7 +251,7 @@ ocaml_archive(
     name = "rakia_so",
     archive_name = "librakia",
     message = "digestif, rakia_lib",
-    visibility = ["//visibility:public"],
+    # visibility = ["//visibility:public"],
     opts = ["-linkall",
             "-verbose"
     ],
@@ -356,7 +356,7 @@ ocaml_binary(
 ## sources in dependency order.
 # ocaml_binary(
 #     name = "sort_deps",
-#     srcs = ["@obazl//tools:sort_deps"],
+#     srcs = ["@obazl_rules_ocaml//tools:sort_deps"],
 #     opts = ["-thread"],
 #     data = ["deps.depends"],
 #     deps = ["@opam//pkg:core",
